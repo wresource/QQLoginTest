@@ -18,6 +18,9 @@ class MainActivity :BaseActivity() {
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         iu = BaseUiListener(QQLoginTestApplication.mTencent)
         setContentView(viewBinding.root)
+        Tencent.resetTargetAppInfoCache()
+        Tencent.resetQQAppInfoCache()
+        Tencent.resetTimAppInfoCache()
         viewBinding.Login.setOnClickListener {
              if (!QQLoginTestApplication.mTencent.isSessionValid) {
                 when (QQLoginTestApplication.mTencent.login(this, "all",iu)) {

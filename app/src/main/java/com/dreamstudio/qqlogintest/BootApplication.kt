@@ -29,7 +29,7 @@ class BootApplication : BaseActivity() {
         //启动动画
         val splashScreen = installSplashScreen()
         setContentView(R.layout.activity_boot_application)
-
+        "更换".showToast()
         //初始化配置
         Tencent.setIsPermissionGranted(true, Build.MODEL)
         Tencent.resetTargetAppInfoCache()

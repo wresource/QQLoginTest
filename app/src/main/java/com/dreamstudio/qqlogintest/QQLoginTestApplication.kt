@@ -22,6 +22,6 @@ class QQLoginTestApplication: Application()  {
         super.onCreate()
         context = applicationContext
         MMKV.initialize(context)
-        mTencent = Tencent.createInstance("自己的ID", context, "com.tencent.login.fileprovider")
+        mTencent = Tencent.createInstance("你的id", context, "com.tencent.login.fileprovider")
     }
 }
